@@ -16,3 +16,9 @@ Uygulama, `1989` portu üzerinden dinleme yapar ve bağlanan web tarayıcısına
 3. Konsolda sunucunun başlatıldığını gördükten sonra web tarayıcınızın adres çubuğuna şunu yazın:
    ```text
    http://localhost:1989
+🏗️ Mimari ve SOLID Prensipleri
+Spaghetti Code yaklaşımından kaçınılmış, sorumluluklar modüllere ayrılmıştır:
+
+Single Responsibility (Tek Sorumluluk): Main portu dinlemekten, ClientHandler gelen HTTP isteklerini yönetmekten, HtmlGenerator ise HTML string üretiminden sorumludur.
+
+Open/Closed (Açık/Kapalı): İleride HTML yerine JSON yanıt dönmek istenirse, mevcut sınıfları bozmadan yeni bir Generator sınıfı eklenebilir.
